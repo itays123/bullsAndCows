@@ -26,7 +26,16 @@ public class Game {
      * @param solution the solution integer
      */
     public Game(int solution) {
-        this.solution = new Attempt(solution);
+        this(new Attempt(solution));
+    }
+
+    /**
+     * Creates a new game object
+     * 
+     * @param solution the solution object
+     */
+    public Game(Attempt solution) {
+        this.solution = solution;
         this.attempts = new ArrayList<>();
         this.isWon = false;
     }
