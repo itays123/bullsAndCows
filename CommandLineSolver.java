@@ -1,19 +1,6 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class CommandLineSolver implements Game.GameSolver {
-
-    public static void main(String[] args) {
-        Random r = new Random();
-        int solution;
-        do {
-            solution = r.nextInt(10000);
-        } while (!Attempt.isAttemptValid(solution));
-
-        Game game = new Game(solution);
-        CommandLineSolver solver = new CommandLineSolver();
-        solver.run(game);
-    }
 
     Scanner scan;
 

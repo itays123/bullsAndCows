@@ -1,5 +1,4 @@
 import java.util.List;
-import java.util.Random;
 
 public class AlgorithmSolver implements Game.GameSolver {
 
@@ -7,18 +6,6 @@ public class AlgorithmSolver implements Game.GameSolver {
 
     public AlgorithmSolver() {
         attempt = Attempt.MIN_VALUE;
-    }
-
-    public static void main(String[] args) {
-        Random r = new Random();
-        int solution;
-        do {
-            solution = r.nextInt(10000);
-        } while (!Attempt.isAttemptValid(solution));
-
-        Game game = new Game(solution);
-        AlgorithmSolver solver = new AlgorithmSolver();
-        solver.run(game);
     }
 
     private boolean shouldAttempt(Attempt attempt, List<Attempt> prevAttempts) {
